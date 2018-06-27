@@ -146,23 +146,23 @@ clientsCarousel = function() {
   });
 }
 
-googleMap = function() {
-  const options = {
-    zoom: 12,
-    center: {
-      lat: 52.31425,
-      lng: 4.942861
-    }
-  }
-  const map = new google.maps.Map(document.querySelector('#map'), options);
-  const marker = new google.maps.Marker ({
-    position: {
-      lat: 52.31425,
-      lng: 4.942861
-    },
-    map: map
-  });
-}
+// googleMap = function() {
+//   const options = {
+//     zoom: 12,
+//     center: {
+//       lat: 52.31425,
+//       lng: 4.942861
+//     }
+//   }
+//   const map = new google.maps.Map(document.querySelector('#map'), options);
+//   const marker = new google.maps.Marker ({
+//     position: {
+//       lat: 52.31425,
+//       lng: 4.942861
+//     },
+//     map: map
+//   });
+// }
 
 inputHasValue = function() {
   const getSiblings = function(elem) {
@@ -286,7 +286,7 @@ formValidate = function() {
       clientsCarousel();
       formValidate();
       inputHasValue();
-      googleMap();
+      // googleMap();
   }
     init();
 })();
