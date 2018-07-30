@@ -1,9 +1,19 @@
-# WEEKLY WEBDEV CHALLENGE 20
+# WEEKLY WEB DEV CHALLENGE 20
 
-***
+## General info
 
-## PSD from FB Weekly WebDev Challenge group
+One page site. PSD from FB Weekly WebDev Challenge group.
 
-### Live: [WWDC20 - live](https://plaski.github.io/wwdc20/dist)
+## Technologies
 
-### Code: [WWDC20 - live](https://github.com/plaski/wwdc20)
+- HTML
+- CSS/SCSS
+- JavaScript
+- Sprites
+- Gulp
+
+## Code/Live
+
+- [Live](https://plaski.github.io/wwdc20/dist)
+
+- [Code](https://github.com/plaski/wwdc20)

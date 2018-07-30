@@ -90,11 +90,10 @@ gulp.task ('html', function() {
       'css': config.cssreplaceout,
       'js': config.jsreplaceout
     }))
-    // .pipe(htmlMin({
-    //   sortAttributes: true,
-    //   sortClassName: true,
-    //   collapseWhitespace: true,
-    // }))
+    .pipe(htmlMin({
+      sortClassName: true,
+      collapseWhitespace: true,
+    }))
     .pipe(gulp.dest(config.dist));
 });
 
