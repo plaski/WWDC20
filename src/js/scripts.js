@@ -1,5 +1,5 @@
 (function() {
-navOnScroll = function() {
+const navOnScroll = function() {
   window.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset;
     let sections = document.querySelectorAll('section');
@@ -24,7 +24,7 @@ navOnScroll = function() {
   });
 }
 
-menuScroll = function() {
+const menuScroll = function() {
   const scroll = new SmoothScroll('a[href*="#"]', {
     header: '.header',
     speed: 1000,
@@ -36,7 +36,7 @@ menuScroll = function() {
   });
 }
 
-navBackground = function() {
+const navBackground = function() {
   window.addEventListener('scroll', function() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 800) {
@@ -51,7 +51,7 @@ navBackground = function() {
   });
 }
 
-worksSelect = function() {
+const worksSelect = function() {
   const nav = document.querySelector('.works .nav');
   nav.addEventListener('click', function(e) {
     e.preventDefault();
@@ -70,7 +70,7 @@ worksSelect = function() {
   });
 }
 
-galleryItemIsActive = function() {
+const galleryItemIsActive = function() {
   let galleryItems = document.querySelectorAll('.gallery__item:not(.gallery__item--join)');
   galleryItems = Array.from(galleryItems);
   galleryItems.forEach(function(galleryItem, index) {
@@ -96,7 +96,7 @@ galleryItemIsActive = function() {
   });
 }
 
-heroCarousel = function() {
+const heroCarousel = function() {
   const slider = tns({
     container: '#heroCarousel',
     items: 1,
@@ -115,7 +115,7 @@ heroCarousel = function() {
   });
 }
 
-clientsCarousel = function() {
+const clientsCarousel = function() {
   const slider = tns({
     container: '#clientsCarousel',
     autoplay: true,
@@ -146,25 +146,7 @@ clientsCarousel = function() {
   });
 }
 
-googleMap = function() {
-  const options = {
-    zoom: 12,
-    center: {
-      lat: 52.31425,
-      lng: 4.942861
-    }
-  }
-  const map = new google.maps.Map(document.querySelector('#map'), options);
-  const marker = new google.maps.Marker ({
-    position: {
-      lat: 52.31425,
-      lng: 4.942861
-    },
-    map: map
-  });
-}
-
-inputHasValue = function() {
+const inputHasValue = function() {
   const getSiblings = function(elem) {
     let siblings = [];
     let sibling = elem.parentNode.firstChild;
@@ -193,7 +175,7 @@ inputHasValue = function() {
   });
 }
 
-formValidate = function() {
+const formValidate = function() {
   const constraints = {
     name: {
       presence: {
@@ -276,7 +258,7 @@ formValidate = function() {
   };
 }
 
-  init = function() {
+  const init = function() {
       navOnScroll();
       menuScroll();
       navBackground();
@@ -286,7 +268,25 @@ formValidate = function() {
       clientsCarousel();
       formValidate();
       inputHasValue();
-      googleMap();
   }
     init();
 })();
+
+
+function googleMap() {
+ const options = {
+   zoom: 12,
+   center: {
+     lat: 52.31425,
+     lng: 4.942861
+   }
+ }
+ const map = new google.maps.Map(document.querySelector('#map'), options);
+ const marker = new google.maps.Marker ({
+   position: {
+     lat: 52.31425,
+     lng: 4.942861
+   },
+   map: map
+ });
+}
