@@ -29,7 +29,7 @@ menuScroll = function() {
     header: '.header',
     speed: 1000,
     offset: 10,
-    after: function() {
+    before: function() {
       const checkbox = document.querySelector('#menuCheckbox');
       checkbox.checked = false;
     }
