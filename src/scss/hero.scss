@@ -1,8 +1,10 @@
 .hero {
-  background-color: $light-base-color;
+  background-color: $base-color;
 
   & .carousel {
     position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
 
     &__prev {
       position: absolute;
@@ -159,12 +161,5 @@
         display: none;
       }
     }
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .hero {
-    margin: 0 auto;
-    max-width: 1280px;
   }
 }
