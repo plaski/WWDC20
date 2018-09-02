@@ -28,7 +28,6 @@ const menuScroll = function() {
   const scroll = new SmoothScroll('a[href*="#"]', {
     header: '.header',
     speed: 1000,
-    offset: 10,
     before: function() {
       const checkbox = document.querySelector('#menuCheckbox');
       checkbox.checked = false;
