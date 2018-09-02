@@ -104,7 +104,8 @@ const heroCarousel = function() {
     speed: 700,
     controls: false,
     nav: false,
-    autoplayButtonOutput: false
+    autoplayButtonOutput: false,
+    autoHeight: true
   });
   document.querySelector('#heroCarouselPrevBtn').addEventListener('click', function() {
     slider.goTo('prev');
